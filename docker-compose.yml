@@ -1,0 +1,22 @@
+version: '3.5'
+services:
+  daemon:
+    image: nickadam/docker-weak-ssh:1.0
+    build: .
+    volumes:
+      - type: volume
+        source: ssh-config
+        target: /etc/ssh
+      - type: volume
+        source: root-ssh
+        target: /root/.ssh
+    ports:
+      - target: 80
+        published: 8080
+        mode: host
+      - target: 22
+        published: 2222
+        mode: host
+volumes:
+  root-ssh:
+  ssh-config:
