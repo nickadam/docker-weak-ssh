@@ -5,6 +5,8 @@ then
   ssh-keygen -A
 fi
 
+usermod -p '*' root
+
 /usr/sbin/sshd
 
 if [ ! -f "$HOME/.ssh/id_rsa" ]

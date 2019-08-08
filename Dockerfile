@@ -7,7 +7,8 @@ RUN apk add \
   openssh-server \
   openssh-sftp-server \
   openssh \
-  nmap-ncat
+  nmap-ncat \
+  shadow
 
 COPY docker-entrypoint.sh /
 
