@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   daemon:
-    image: nickadam/docker-weak-ssh:1.1
+    image: nickadam/docker-weak-ssh:1.2
     build: .
     volumes:
       - type: volume
